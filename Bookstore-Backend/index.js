@@ -11,7 +11,7 @@ app.use(cors());
 const mongoUrl = process.env.MONGO_URL;
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/library')
+mongoose.connect(mongoUrl)
     .then(()=> console.log('db connected successfull'));
 
 
@@ -74,4 +74,5 @@ const PORT = process.env.PORT || 5001;
 
 app.listen(PORT, ()=> {
     console.log('listing...');
+
 });
