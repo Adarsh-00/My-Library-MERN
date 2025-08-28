@@ -14,7 +14,7 @@ const Create = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(formData);
-    axios.post('http://localhost:8080/add-book', formData)
+    axios.post('https://my-library-mern.onrender.com/add-book', formData)
     .then(()=>{
       alert('data added successfully');
       navigate('/');
@@ -43,3 +43,4 @@ const Create = () => {
 }
 
 export default Create;
+
