@@ -14,14 +14,14 @@ const Update = () => {
   });
   
   useEffect(() => {
-    axios.get(`http://localhost:8080/get-books/${id}`)
+    axios.get(`https://my-library-mern.onrender.com/get-books/${id}`)
     .then((res) => setFormData(res.data))
     .catch((err)=>console.error(err.message));
   }, [id]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:8080/update-book/${id}`, formData)
+    await axios.put(`https://my-library-mern.onrender.com/update-book/${id}`, formData)
     .then(()=>navigate('/'))
     .catch((err)=>console.error(err.message));
   }
@@ -43,3 +43,4 @@ const Update = () => {
 }
 
 export default Update;
+
