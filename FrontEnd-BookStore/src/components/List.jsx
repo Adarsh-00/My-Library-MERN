@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const List = () => {
-  const API_URL = 'http://localhost:8080/get-books';
+  const API_URL = 'https://my-library-mern.onrender.com/get-books';
 
   const [books, setBooks] = useState([]);
 
@@ -13,7 +13,7 @@ const List = () => {
   }, []);
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:8080/remove-book/${id}`);
+    await axios.delete(`https://my-library-mern.onrender.com/remove-book/${id}`);
     setBooks(books.filter((item) => item._id !== id));
     
     
@@ -62,3 +62,4 @@ const List = () => {
 }
 
 export default List;
+
